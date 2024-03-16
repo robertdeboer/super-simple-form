@@ -49,6 +49,7 @@ Started: 7:30 AM EST
 - Documentation / Comments
 - Code Cleanup
 - Styling updates
+
 Ended: 12:00 AM EST
 - Misc: cups of coffee: 3
 - Music: The Piano Guys
