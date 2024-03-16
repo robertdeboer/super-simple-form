@@ -53,3 +53,8 @@ Started: 7:30 AM EST
 Ended: 12:00 AM EST
 - Misc: cups of coffee: 3
 - Music: The Piano Guys
+
+Notes:
+- The UI would be a great use case for a framework such as Vue where the entire form
+would be on one page and the sections hide/expand as needed. This would then keep all the 
+data and validation in one place
