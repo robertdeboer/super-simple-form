@@ -10,6 +10,8 @@ The application requires the following to run locally:
 In the root of this application
 run the following commands to get a working instance.
 - Install composer packages `composer install`
+- Ensure the configuration file is available `cp .env.example .env`
+- Finish the install `composer run post-create-project-cmd`
 - Create the application sever `./vendor/bin sail up -d`
 
 The application will now be available at http://localhost
