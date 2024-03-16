@@ -70,7 +70,8 @@ class FormMarriage extends Component
      */
     public function save(): void
     {
-        $this->marriage->store();
-        $this->redirectRoute('form.result');
+        if($this->marriage->store()) {
+            $this->redirectRoute('form.result');
+        }
     }
 }

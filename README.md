@@ -10,10 +10,11 @@ The application requires the following to run locally:
 In the root of this application
 run the following commands to get a working instance.
 - Install composer packages `composer install`
-- Install javascript packages `npm install`
 - Create the application sever `./vendor/bin sail up -d`
 
-The application will now be available at https://localhost
+The application will now be available at http://localhost
+
+The form can be reached at http://localhost/form/me
 
 ## The Task
 Create a Form:
@@ -46,3 +47,5 @@ Started: 7:30 AM EST
 - Create result page functionality
 - Testing
 - Documentation / Comments
+- Code Cleanup
+- Styling updates

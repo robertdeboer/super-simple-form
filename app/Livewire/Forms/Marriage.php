@@ -50,11 +50,11 @@ class Marriage extends Form
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
-    public function store(bool $validate = true): void
+    public function store(bool $validate = true): bool
     {
         if (!$validate) {
             session()->put(self::SESSION, $this->all());
-            return;
+            return true;
         }
         $this->validate();
         if ($this->isMarried == 'Yes') {
@@ -66,6 +66,7 @@ class Marriage extends Form
             $user                 = session()->get(User::SESSION, []);
             if ((new Dates())->marriedBefore18($user['dateOfBirth'], $this->dateOfMarriage)) {
                 $this->addError('year', 'Marriage before 18 is not allowed.');
+                return false;
             }
         } else {
             $this->country = '';
@@ -76,5 +77,6 @@ class Marriage extends Form
         }
         Log::debug('marriage', $this->all());
         session()->put(self::SESSION, $this->all());
+        return true;
     }
 }
